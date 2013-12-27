@@ -1,15 +1,16 @@
 %h1 Listing companies
 
-%table
-  %tr
-    %th Name
-    %th Address
-    %th Tel
-    %th Email
-    %th Memo
-    %th
-    %th
-    %th
+%table.table.table-striped
+  %thead
+    %tr
+      %th Name
+      %th Address
+      %th Tel
+      %th Email
+      %th Memo
+      %th
+      %th
+      %th
 
   - @companies.each do |company|
     %tr
@@ -24,4 +25,5 @@
 
 %br
 
-= link_to 'New Company', new_company_path
+.form-actions
+  = link_to 'New Company', new_company_path, class: 'btn btn-primary'
